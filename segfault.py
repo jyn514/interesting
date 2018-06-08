@@ -1,3 +1,6 @@
+'''see also: https://github.com/python/cpython/blob/master/Lib/test/crashers
+as well as https://wiki.python.org/moin/CrashingPython'''
+
 import sys
 from utils import print_file
 
