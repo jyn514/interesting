@@ -19,3 +19,16 @@ for s in "Isn't this crazy? (more like crazy bad; I'd get killed if I did it in 
 
 while hasattr(str, '__call__'):
     str = str()
+
+print("\nthis wouldn't be a real demo without some exceptions, would it?")
+str = type(str)  # we messed this up earlier while __call__ ing
+builtins.str = str = metastring('meh')
+
+try:
+    help(str)
+except ImportError as e:
+    print(e, "(?) well that's weird")
+
+builtins.str = str = str()
+print("let's try that again, shall we?")
+import pydoc
